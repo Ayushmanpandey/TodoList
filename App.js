@@ -40,7 +40,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* Added this scroll view to enable scrolling when list gets longer than the page */}
-      <ScrollView
+      <View style = {styles.containerTwo}>
+        <ScrollView
         contentContainerStyle={{
           flexGrow: 1
         }}
@@ -65,7 +66,7 @@ export default function App() {
       </View>
         
       </ScrollView>
-
+          </View>
       {/* Write a task */}
       {/* Uses a keyboard avoiding view which ensures the keyboard does not cover the items on screen */}
       
@@ -89,17 +90,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#262522',
+    padding :30 ,
+    paddingHorizontal: 10,
+    paddingBottom: 20,
+    
+  },
+  containerTwo: {
+    flex : 1,
+    backgroundColor : '#666968',
+    borderRadius: 40,    
+    borderColor: 'white',
+    borderWidth : 1,
+    
+
   },
   tasksWrapper: {
-    paddingTop: 80,
+    paddingTop: 20,
     paddingHorizontal: 20,
   },
   sectionTitle: {
     fontSize: 26,
     fontWeight: 'bold',
     color:'white',
-    fontFamily: 'Segoe Print',
-    paddingLeft :60,
+    paddingLeft :'25%',
     flexDirection : 'row',
   },
   items: {
@@ -107,11 +120,14 @@ const styles = StyleSheet.create({
   },
   writeTaskWrapper: {
     position: 'absolute',
-    bottom: 60,
+    bottom: 30,
+    left: 40,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center'
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  
+
   },
   input: {
     paddingVertical: 15,
@@ -121,16 +137,18 @@ const styles = StyleSheet.create({
     borderColor: '#C0C0C0',
     borderWidth: 1,
     width: 250,
+    marginLeft: 30,
   },
   addWrapper: {
     width: 60,
     height: 60,
     backgroundColor: '#FFF',
-    borderRadius: 60,
+    borderRadius:100,
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: '#C0C0C0',
-    borderWidth: 1,
+    borderWidth: 5,
+    marginRight: 90,
   },
   addText: {
     fontWeight : 'bold',
